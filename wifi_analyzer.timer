@@ -1,0 +1,10 @@
+[Unit]
+Description=Run WiFi Analyzer every 30 mins
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=30min
+Unit=wifi-analyzer.service
+
+[Install]
+WantedBy=timers.target
