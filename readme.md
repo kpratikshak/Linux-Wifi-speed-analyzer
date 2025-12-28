@@ -3,7 +3,7 @@
 
 🎯 Project Goal:
 
-Build a CLI-based Wi-Fi speed, latency, signal strength & stability analyzer that:
+Build a CLI-based Wi-Fi speed, latency, signal strength & stability analyzer which
 
 Runs on RHEL / Fedora / Rocky / AlmaLinux
 
@@ -15,18 +15,77 @@ Can run manually, via cron, or systemd timer
 
 Produces useful analytics for engineers
 
+Features:
 
-## Project Structure:
+## 🎯 Features
+- Signal strength monitoring
+- Ping latency test
+- iperf3 bandwidth performance
+- Logs performance history
+- Human readable reports
+- Supports cron + systemd automation
 
-wifi-speed-analyzer/
-│
-├── analyzer.sh
-├── config.conf
-├── setup.sh
-├── report.sh
-├── README.md
-├── logs/
-│     └── wifi_stats.log
-└── systemd/
-      ├── wifi-analyzer.service
-      └── wifi-analyzer.timer
+---
+
+## 🛠 Supported Platforms
+- RHEL 8 / 9
+- Rocky Linux
+- AlmaLinux
+- Fedora
+
+
+## 🚀 Install
+```bash
+git clone https://github.com/kpratikshak/wifi-speed-analyzer.git
+cd wifi-speed-analyzer
+chmod +x setup.sh
+./setup.sh
+⚙️ Configure
+nano config.conf
+
+▶️ Run Tests
+bash
+Copy code
+./analyzer.sh
+📊 View Report
+bash
+Copy code
+./report.sh
+⏲ Automate (Optional)
+bash
+Copy code
+sudo systemctl enable --now wifi-analyzer.timer
+
+📌This project demonstrates:
+
+Linux networking skills
+
+Bash automation
+
+Performance monitoring
+
+Production-style logging
+
+Systemd automation
+
+
+#Features:
+- Built an automated **Wi-Fi performance analytics tool** for RHEL using Bash & Linux networking utilities.
+- Implemented **latency + throughput benchmarking** using `ping` and `iperf3`.
+- Added **logging + analytics reporting** for trend monitoring.
+- Enabled **automation via systemd timers** for scheduled diagnostics.
+
+
+
+yaml
+Copy code
+Network Health Score: 82/100
+Even simple weighted formula looks impressive 😎
+
+⚙️ Parallel Testing
+Use background jobs in bash:
+
+Run ping
+Run iperf
+
+
