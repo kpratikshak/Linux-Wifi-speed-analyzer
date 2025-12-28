@@ -76,11 +76,14 @@ Systemd automation
 - Enabled **automation via systemd timers** for scheduled diagnostics.
 
 
+Automation script:
+bash
+sudo cp systemd/* /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now wifi-analyzer.timer
+systemctl status wifi-analyzer.timer
 
-yaml
-Copy code
-Network Health Score: 82/100
-Even simple weighted formula looks impressive 😎
+
 
 ⚙️ Parallel Testing
 Use background jobs in bash:
