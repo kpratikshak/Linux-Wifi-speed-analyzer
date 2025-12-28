@@ -1,0 +1,6 @@
+[Unit]
+Description=WiFi Speed Analyzer
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash /home/<user>/wifi-speed-analyzer/analyzer.sh
